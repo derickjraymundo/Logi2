@@ -1,0 +1,18 @@
+.nav-left-sidebar .nav-item {
+    margin-bottom: 5px;
+}
+.reserve-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card {
+    position: relative; /* Make card a positioning context for the button */
+}
