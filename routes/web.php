@@ -1,19 +1,19 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\HomeController;
-
-route::get('/',[HomeController::class,'index']);
-
+Route::get('/register', [HomeController::class, 'register'])->name(name: 'register');
+Route::get('/', [HomeController::class, 'dashboard'])->name('dashboard');
+Route::get('/logins', [HomeController::class, 'login'])->name('login');
+Route::get('/signup', [HomeController::class, 'signup'])->name(name: 'signup');
+Route::get('/forgot-passwords', [HomeController::class, 'forgotpassword'])->name(name: 'forgot-password');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified',
+    'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
 });
-
-route::get('redirect',[HomeController::class,'redirect']);
