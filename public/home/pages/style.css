@@ -5,7 +5,7 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    background-color: #007bff; /* Blue color */
+    background-color: #007bff; 
     color: white;
     border: none;
     padding: 8px 12px;
@@ -14,5 +14,21 @@
 }
 
 .card {
-    position: relative; /* Make card a positioning context for the button */
+    position: relative; 
+}
+.table-responsive {
+    padding: 0; /* Remove padding from the table container */
+}
+
+.table {
+    width: 100%; /* Make sure the table takes the full width of its container */
+    table-layout: auto; /* Allow columns to adjust based on their content */
+}
+
+.table th, .table td {
+    padding: 12px; /* Increase padding for better readability */
+}
+
+.card-body {
+    padding: 1rem; /* Reduce the padding to fit more content in the card */
 }
