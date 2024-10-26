@@ -23,7 +23,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="../index.html"> <img src="../img/c.jpg" alt="ECOMPANYPH" style="height: 60px; width: 250px;"> </a>
+                <a class="navbar-brand" href="../index.html"> <img src="../img/c.jpg" alt="FAREASTCAFELOGO" style="height: 60px; width: 250px;"> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -140,7 +140,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="docutrack.html"><i class="fa fa-fw fa-file"></i> Document Tracking </a>
+                                <a class="nav-link active" href="docutrack.html"><i class="fa fa-fw fa-file"></i> Document Tracking </a>
                                 <div id="submenu-2" class="collapse submenu" style="background-color: white; color: #000;"></div>
                             </li>
 
@@ -148,11 +148,11 @@
                                 Features
                             </li>                  
                             <li class="nav-item">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-map-marker-alt"></i> Fleet Management </a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-map-marker-alt"></i> Fleet Management </a>
                                 <div id="submenu-9" class="collapse submenu" style="background-color: white; color: #000;">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#"> Fleet Live GPS </a>
+                                            <a class="nav-link" href="map-google.html"> Fleet Live GPS </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -182,13 +182,12 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title"> Logistics Fleet Tracker </h2>
+                            <h2 class="pageheader-title"> Logistics Document Tracker </h2>
                         
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"> Logistics Dashboard</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page"> Logistics Fleet Tracker </li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"> Document Tracking</a></li>
                                     </ol>
                                 </nav>
                             </div>
@@ -199,18 +198,162 @@
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"> 
+                    <div class="col-xl-2 col-lg-6 col-md-4 col-sm-8 col-8">
                         <div class="card">
-                            <h5 class="card-header">Driver Information</h5>
+                            <div class="card-body">
+                                <h5 class="text-muted"> Total Inbound Shipments </h5>
+                                <div class="metric-value d-inline-block">
+                                    <h1 class="mb-1">3</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"> 
+                        <div class="card mb-3">
+                            <h5 class="card-header">Inbound Documents</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered" style="width: 100%;"> 
                                         <thead class="bg-light">
                                             <tr class="border-0">
                                                 <th class="border-0">#</th>
-                                                <th class="border-0">Driver Name</th>
-                                                <th class="border-0">Age</th>
+                                                <th class="border-0">Document Type</th>
+                                                <th class="border-0">Handler</th>
                                                 <th class="border-0">Address</th>
+                                                <th class="border-0">Phone #</th>
+                                                <th class="border-0">Email Address</th>
+                                                <th class="border-0">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Amador Cruz</td>
+                                                <td>39</td>
+                                                <td>Novaliches, QC</td>
+                                                <td>09394518012</td>
+                                                <td>cruzamador@gmail.com</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span> Processing </td>
+                                                <td>
+                                                    <button class="allo-btn">Allocate Document</button>
+                                                </td>
+                                            </tr>
+                                     
+                                            <tr>
+                                                <td>2</td>
+                                                <td>John Domingo</td>
+                                                <td>41</td>
+                                                <td>Pasig City</td>
+                                                <td>09123456789</td>
+                                                <td>domingoj@gmail.com</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span> Processing </td>
+                                                <td><button class="allo-btn">Allocate Document</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="allocateModal" class="modal" style="display:none;">
+                            <div class="modal-content">
+                                <span class="close-btn" onclick="closeModal()">&times;</span>
+                                <h2>Document Allocation</h2>
+                                <form id="allocationForm">
+                                    <div class="form-group">
+                                        <label for="driverName">Choose Driver:</label>
+                                        <select id="driverName" name="driverName" required>
+                                            <option value="" disabled selected>Select Driver</option>
+                                            <option value="Brix Cejalbo">Brix Cejalbo</option>
+                                            <option value="Derick Raymundo">Derick Raymundo</option>
+                                            <option value="Nath Ursua">Nath Ursua</option>
+                                            <option value="Romela Santos">Romela Santos</option>
+                                            <option value="Mosa Assimudin">Mosa Assimudin</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="vehicleType">Vehicle Type:</label>
+                                        <select id="vehicleType" name="vehicleType" required>
+                                            <option value="" disabled selected>Select a vehicle</option>
+                                            <option value="Motorcycles">Motorcycles</option>
+                                            <option value="4-Wheeler Cars">4-Wheeler Cars</option>
+                                            <option value="Delivery Vans">Delivery Vans</option>
+                                            <option value="Delivery Trucks">Delivery Trucks</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="purpose">Additional Notes for Driver:</label>
+                                        <textarea id="purpose" name="purpose" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="submit-btn">Allocate</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"> 
+                        <div class="card mb-3">
+                            <h5 class="card-header">Outbound Documents</h5>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered" style="width: 100%;"> 
+                                        <thead class="bg-light">
+                                            <tr class="border-0">
+                                                <th class="border-0">#</th>
+                                                <th class="border-0">Document Type</th>
+                                                <th class="border-0">Receiver</th>
+                                                <th class="border-0"></th>
+                                                <th class="border-0">Phone #</th>
+                                                <th class="border-0">Email Address</th>
+                                                <th class="border-0">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Amador Cruz</td>
+                                                <td>39</td>
+                                                <td>Novaliches, QC</td>
+                                                <td>09394518012</td>
+                                                <td>cruzamador@gmail.com</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span> Processing </td>
+                                                <td>
+                                                    <button class="allo-btn">Allocate Document</button>
+                                                </td>
+                                            </tr>
+                                     
+                                            <tr>
+                                                <td>2</td>
+                                                <td>John Domingo</td>
+                                                <td>41</td>
+                                                <td>Pasig City</td>
+                                                <td>09123456789</td>
+                                                <td>domingoj@gmail.com</td>
+                                                <td><span class="badge-dot badge-brand mr-1"></span> Processing </td>
+                                                <td><button class="allo-btn">Allocate Document</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"> 
+                        <div class="card">
+                            <h5 class="card-header"> Document Information </h5>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered" style="width: 100%;"> 
+                                        <thead class="bg-light">
+                                            <tr class="border-0">
+                                                <th class="border-0">#</th>
+                                                <th class="border-0"> Document Type </th>
+                                                <th class="border-0"> Handler </th>
+                                                <th class="border-0"> Address </th>
                                                 <th class="border-0">Phone #</th>
                                                 <th class="border-0">Email Address</th>
                                                 <th class="border-0">Status</th>
@@ -260,91 +403,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <!-- ============================================================== -->
-                    <!-- Map 1 with driver and package info -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Map 1</h5>
-                            <div class="card-body">
-                                <div id="map" class="gmaps"></div>
-                                <!-- Tracking information -->
-                                <div class="tracking-info mt-3">
-                                    <h6>Driver Information</h6>
-                                    <p><strong>Driver Name:</strong> Amador Cruz</p>
-                                    <p><strong>Package:</strong> Official Documents - Invoice #12345</p>
-                                    <p><strong>Delivery Time:</strong> 27-08-2024 14:45:00</p>
-                                    <p><strong>Destination:</strong> Makati City, PH</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <!-- ============================================================== -->
-                    <!-- Map 2 with driver and package info -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Map 2</h5>
-                            <div class="card-body">
-                                <div id="map_1" class="gmaps"></div>
-                                <!-- Tracking information -->
-                                <div class="tracking-info mt-3">
-                                    <h6>Driver Information</h6>
-                                    <p><strong>Driver Name:</strong> John Domingo </p>
-                                    <p><strong>Package:</strong> Confidential Document - Contract #56789</p>
-                                    <p><strong>Delivery Time:</strong> 27-08-2024 16:30:00</p>
-                                    <p><strong>Destination:</strong> Quezon City, PH</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <!-- ============================================================== -->
-                    <!-- Map 3 with driver and package info -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Map 3</h5>
-                            <div class="card-body">
-                                <div id="map_2" class="gmaps"></div>
-                                <!-- Tracking information -->
-                                <div class="tracking-info mt-3">
-                                    <h6>Driver Information</h6>
-                                    <p><strong>Driver Name:</strong> Jerax Valdez </p>
-                                    <p><strong>Package:</strong> Legal Documents - Case File #98765</p>
-                                    <p><strong>Delivery Time:</strong> 28-08-2024 09:00:00</p>
-                                    <p><strong>Destination:</strong> Pasig City, PH</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <!-- ============================================================== -->
-                    <!-- Map 4 with driver and package info -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Map 4</h5>
-                            <div class="card-body">
-                                <div id="map_3" class="gmaps"></div>
-                                <!-- Tracking information -->
-                                <div class="tracking-info mt-3">
-                                    <h6>Driver Information</h6>
-                                    <p><strong>Driver Name:</strong> Samuel Dela Cruz</p>
-                                    <p><strong>Package:</strong> Order Package - Shipment #112233</p>
-                                    <p><strong>Delivery Time:</strong> 28-08-2024 11:45:00</p>
-                                    <p><strong>Destination:</strong> Manila, PH</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+
+
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
@@ -361,7 +421,7 @@
                                 <a href="javascript: void(0);">Contact Us</a>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -381,6 +441,7 @@
     <script src="../assets/libs/js/google_map.js">
     </script>
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyBUb3jDWJQ28vDJhuQZxkC0NXr_zycm8D0&amp;sensor=true"></script>
+    <script src="../documentation/js/allobutton.js"></script>
 </body>
  
 </html>

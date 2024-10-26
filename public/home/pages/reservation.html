@@ -10,7 +10,7 @@
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="/public/home/pages/style.css">
+    <link rel="stylesheet" href="../pages/style.css">
     <title> Far East Cafe </title>
 </head>
 
@@ -24,7 +24,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html"> <img src="../img/cafe.jpg" alt="FAREASTCAFELOGO" style="height: 60px; width: 250px;"> </a>
+                <a class="navbar-brand" href="index.html"> <img src="../img" alt="ECOMPANYPH" style="height: 60px; width: 250px;"> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -140,6 +140,11 @@
                                 </div>
                             </li>
 
+                            <li class="nav-item">
+                                <a class="nav-link" href="docutrack.html"><i class="fa fa-fw fa-file"></i> Document Tracking </a>
+                                <div id="submenu-2" class="collapse submenu" style="background-color: white; color: #000;"></div>
+                            </li>
+
                             <li class="nav-divider">
                                 Features
                             </li>                  
@@ -183,8 +188,11 @@
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"> Far East Cafe Vehicle Reservations </a></li>
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"> Far East Cafe Vehicle Reservations </a>
+                                                <button class="reserve-btn">Reserve</button>
+                                            </li>
                                         </ol>
+            
                                     </nav>
                                 </div>
                             </div>
@@ -204,7 +212,7 @@
                                         <p>Available: 2</p>
                                         <p>Fuel Type: Petrol</p>
                                     </div>
-                                    <button class="reserve-btn">Reserve</button>
+                                   
                                 </div>
                             </div>
                         
@@ -215,7 +223,7 @@
                                         <p>Available: 1</p>
                                         <p>Fuel Type: Petrol</p>
                                     </div>
-                                    <button class="reserve-btn">Reserve</button>
+                                   
                                 </div>
                             </div>
                         
@@ -226,7 +234,7 @@
                                         <p>Available: 1</p>
                                         <p>Fuel Type: Diesel</p>
                                     </div>
-                                    <button class="reserve-btn">Reserve</button>
+                                   
                                 </div>
                             </div>
                         
@@ -237,15 +245,69 @@
                                         <p>Available: 2</p>
                                         <p>Fuel Type: Diesel</p>
                                     </div>
-                                    <button class="reserve-btn">Reserve</button>
+    
                                 </div>
                             </div>
                         </div>
+                        
+                        <div id="reservationModal" class="modal" style="display:none;">
+                            <div class="modal-content">
+                                <span class="close-btn" onclick="closeModal()">&times;</span>
+                                <h2>Reserve Your Vehicle</h2>
+                                <form id="reservationForm">
+                                    <div class="form-group">
+                                        <label for="vehicleType">Vehicle Type:</label>
+                                        <select id="vehicleType" name="vehicleType" required>
+                                            <option value="Motorcycles">Motorcycles</option>
+                                            <option value="4-Wheeler Cars">4-Wheeler Cars</option>
+                                            <option value="Delivery Vans">Delivery Vans</option>
+                                            <option value="Delivery Trucks">Delivery Trucks</option>
+                                        </select>
+                                    </div>
 
+                                    <div class="form-group">
+                                        <label for="name">Your Name:</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="dept">Department:</label>
+                                        <select id="dept" name="dept" required>
+                                            <option value="" disabled selected>Select a department</option>
+                                            <option value="ADMIN">ADMIN</option>
+                                            <option value="HR">HR</option>
+                                            <option value="CORE">CORE</option>
+                                            <option value="FINANCE">FINANCE</option>
+                                            <option value="LOGISTICS">LOGISTICS</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number:</label>
+                                        <input type="tel" id="phone" name="phone" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="purpose">Purpose of Reservation:</label>
+                                        <textarea id="purpose" name="purpose" rows="4" required></textarea>
+                                    </div>
+
+                                    <button type="submit" class="submit-btn">Submit Reservation</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        
                      
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
+            <br><br><br><br><br><br><br><br><br><br>
             <div class="footer">
                 <div class="container-fluid"> 
                     <div class="row">
@@ -294,6 +356,10 @@
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+    <script src="../documentation/js/reservebutton.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     
 </body>
 
