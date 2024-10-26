@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="documentation/css/style.css">
     <title> Logistics Dashboard </title>
 </head>
@@ -205,159 +206,85 @@
                     <!-- ============================================================== -->
                     <!-- end pageheader  -->
                     <!-- ============================================================== -->
-                    <div class="ecommerce-widget">
-                        <div class="row">
-                            <!-- Fleet Utilization Rate -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted"> Fleet Utilization Rate </h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1"></h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>25%</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue"></div>
-                                </div>
-                            </div>
-                            <!-- Fuel Consumption -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted"> Fuel Consumption </h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1"> 92118 </h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-down"></i></span><span>18%</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue2"></div>
-                                </div>
-                            </div>
-                            <!-- Average Delivery Time per Vehicle -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted"> Average Delivery Time per Vehicle </h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">1 hour, 29 mins</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>4.2%</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue3"></div>
-                                </div>
-                            </div>
-                            <!-- Vehicle Downtime -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted"> Vehicle Downtime </h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">1234567</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-down"></i></span><span>23%</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue4"></div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <!-- Mileage per Vehicle and Vehicle Status side by side -->
-                        <div class="row">
-                            <!-- Mileage per Vehicle -->
-                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header"> Mileage per Vehicle </h5>
-                                    <div class="card-body">
-                                        <div class="ct-chart-category ct-golden-section" style="height: 315px;"></div>
-                                        <div class="text-center m-t-40">
-                                            <span class="legend-item mr-3">
-                                                <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span>
-                                                <span class="legend-text"> 4-Wheeler </span>
-                                            </span>
-                                            <span class="legend-item mr-3">
-                                                <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                                <span class="legend-text"> Delivery Truck </span>
-                                            </span>
-                                            <span class="legend-item mr-3">
-                                                <span class="fa-xs text-info mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                                <span class="legend-text"> Motorcycle </span>
-                                            </span>
+                    <div class="ecommerce-widget">            
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-8 col-md-8 col-sm-14 col-14">
+                                    <div class="card">
+                                        <div class="card-body" style="height: 500px">
+                                            <hr width="145px" style="margin-top: -20px; border: 1px solid black; align: left">
+                                            <h5><i class="bi bi-calendar mr-2"></i> Total Vehicle Requests 
+                                            </h5>
+                                            <hr>
+                                            <p>No News and Events yet</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                    
-                            <!-- Vehicle Status -->
-                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header"> Vehicle Status </h5>
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead class="bg-light">
-                                                    <tr class="border-0">
-                                                        <th class="border-0">#</th>
-                                                        <th class="border-0"> Vehicle Type </th>
-                                                        <th class="border-0"> Vehicle Name </th>
-                                                        <th class="border-0"> Vehicle Id </th>
-                                                        <th class="border-0"> Reservation Time </th>
-                                                        <th class="border-0"> Reservor </th>
-                                                        <th class="border-0"> Status </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Motorcycle</td>
-                                                        <td>LX08max</td>
-                                                        <td>id0001</td>
-                                                        <td>27-08-2024 01:22:12</td>
-                                                        <td>Ate Nineng</td>
-                                                        <td><span class="badge-dot badge-brand mr-1"></span>InTransit</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Motorcycle</td>
-                                                        <td>PRQ01m80</td>
-                                                        <td>id0002</td>
-                                                        <td>25-08-2024 21:12:56</td>
-                                                        <td> Erica Raymundo </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>4-Wheeler Car</td>
-                                                        <td>Toyota Corolla</td>
-                                                        <td>id0003</td>
-                                                        <td>24-08-2024 14:12:00</td>
-                                                        <td>Tekulangot</td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>Delivery Van</td>
-                                                        <td>Hiace</td>
-                                                        <td>id0004</td>
-                                                        <td>23-08-2024 09:12:35</td>
-                                                        <td>Dexter Von</td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+
+                               
+                                    <!-- Vehicle Status Table -->
+                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                        <div class="card">
+                                            <h5 class="card-header">Vehicle Status</h5>
+                                            <div class="card-body p-0">
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead class="bg-light">
+                                                            <tr class="border-0">
+                                                                <th class="border-0">#</th>
+                                                                <th class="border-0">Vehicle Type</th>
+                                                                <th class="border-0">Vehicle Name</th>
+                                                                <th class="border-0">Vehicle ID</th>
+                                                                <th class="border-0">Reservation Time</th>
+                                                                <th class="border-0">Reservor</th>
+                                                                <th class="border-0">Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>Motorcycle</td>
+                                                                <td>LX08max</td>
+                                                                <td>id0001</td>
+                                                                <td>27-08-2024 01:22:12</td>
+                                                                <td>Ate Nineng</td>
+                                                                <td><span class="badge-dot badge-brand mr-1"></span>In Transit</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>Motorcycle</td>
+                                                                <td>PRQ01m80</td>
+                                                                <td>id0002</td>
+                                                                <td>25-08-2024 21:12:56</td>
+                                                                <td>Erica Raymundo</td>
+                                                                <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>4-Wheeler Car</td>
+                                                                <td>Toyota Corolla</td>
+                                                                <td>id0003</td>
+                                                                <td>24-08-2024 14:12:00</td>
+                                                                <td>Tekulangot</td>
+                                                                <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4</td>
+                                                                <td>Delivery Van</td>
+                                                                <td>Hiace</td>
+                                                                <td>id0004</td>
+                                                                <td>23-08-2024 09:12:35</td>
+                                                                <td>Dexter Von</td>
+                                                                <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                
                                 </div>
-                            </div> 
-                        </div>
-                    </div>
+                                
                     
             <!-- ============================================================== -->
             <!-- footer -->
@@ -410,6 +337,8 @@
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../home/documentation/js/chart.js"></script>
 </body>
  
 </html>

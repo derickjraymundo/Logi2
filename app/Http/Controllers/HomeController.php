@@ -15,6 +15,11 @@ class HomeController extends Controller
     {
         return view('home.userpage');
     }
+
+    public function login()
+    {
+        return view('home.login');
+    }
     public function redirect()
     {
         $usertype=Auth::user()->usertype;
