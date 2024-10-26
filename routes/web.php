@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/register', [HomeController::class, 'register'])->name(name: 'register');
 Route::get('/', [HomeController::class, 'dashboard'])->name('dashboard');
 Route::get('/logins', [HomeController::class, 'login'])->name('login');
-Route::get('/signup', [HomeController::class, 'signup'])->name(name: 'signup');
 Route::get('/forgot-passwords', [HomeController::class, 'forgotpassword'])->name(name: 'forgot-password');
 Route::middleware([
     'auth:sanctum',
