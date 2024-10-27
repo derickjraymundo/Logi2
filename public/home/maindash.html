@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.css" rel="stylesheet">
     <link rel="stylesheet" href="documentation/css/style.css">
     <title> Logistics Dashboard </title>
 </head>
@@ -196,7 +197,7 @@
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"> Far East Cafe Logistics Dashboard </a></li>
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"> Analytics & Reportings </a></li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -206,189 +207,137 @@
                     <!-- ============================================================== -->
                     <!-- end pageheader  -->
                     <!-- ============================================================== -->
-                    <div class="ecommerce-widget">            
-                            <div class="row">
-                                <div class="col-xl-6 col-lg-8 col-md-8 col-sm-14 col-14">
-                                    <div class="card">
-                                        <div class="card-body" style="height: 500px">
-                                            <hr width="145px" style="margin-top: -20px; border: 1px solid black; align: left">
-                                            <h5><i class="bi bi-calendar mr-2"></i> Total Vehicle Requests 
-                                            </h5>
-                                            <hr>
-                                            <p>
-                                               <div class="row">
-                                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                                        <div class="card border-3 border-top border-top-primary">
-                                                            <div class="card-body">
-                                                                <h5 class="text-muted">Total of Barista</h5>
-                                                                <div class="metric-value d-inline-block">
-                                                                    <h1>4</h1>
-                                                                </div>
-                                                            </div>
+ 
+                    <div class="ecommerce-widget">
+                        <div class="row">
+                            <!-- Total Vehicle Requests Section -->
+                            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-14 col-14">
+                                <div class="card">
+                                    <div class="card-body" style="height: 500px;">
+                                        <hr width="145px" style="margin-top: -20px; border: 1px solid black; text-align: left;">
+                                        <h5><i class="bi bi-calendar mr-2"></i> Total Vehicle Requests</h5>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-xl-5 col-lg-5 col-md-10 col-sm-16 col-16 mb-3">
+                                                <div class="card border-3 border-top border-top-primary">
+                                                    <div class="card-body">
+                                                        <h5 class="text-muted">Total Requests</h5>
+                                                        <div class="metric-value d-inline-block">
+                                                            <h1>15</h1>
                                                         </div>
                                                     </div>
-                                                  
-                                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                                            <div class="card border-3 border-top border-top-primary">
-                                                                <div class="card-body">
-                                                                    <h5 class="text-muted">Total of Barista</h5>
-                                                                    <div class="metric-value d-inline-block">
-                                                                        <h1>4</h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                                            <div class="card border-3 border-top border-top-primary">
-                                                                <div class="card-body">
-                                                                    <h5 class="text-muted">Total of Barista</h5>
-                                                                    <div class="metric-value d-inline-block">
-                                                                        <h1>4</h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                                            <div class="card border-3 border-top border-top-primary">
-                                                                <div class="card-body">
-                                                                    <h5 class="text-muted">Total of Barista</h5>
-                                                                    <div class="metric-value d-inline-block">
-                                                                        <h1>4</h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                 </div> 
-                                                 
-                                                 <div class="row">
-                                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                                        <div class="card border-3 border-top border-top-primary">
-                                                            <div class="card-body">
-                                                                <h5 class="text-muted">Total of Barista</h5>
-                                                                <div class="metric-value d-inline-block">
-                                                                    <h1>4</h1>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                  
-                                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                                            <div class="card border-3 border-top border-top-primary">
-                                                                <div class="card-body">
-                                                                    <h5 class="text-muted">Total of Barista</h5>
-                                                                    <div class="metric-value d-inline-block">
-                                                                        <h1>4</h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                                            <div class="card border-3 border-top border-top-primary">
-                                                                <div class="card-body">
-                                                                    <h5 class="text-muted">Total of Barista</h5>
-                                                                    <div class="metric-value d-inline-block">
-                                                                        <h1>4</h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                                            <div class="card border-3 border-top border-top-primary">
-                                                                <div class="card-body">
-                                                                    <h5 class="text-muted">Total of Barista</h5>
-                                                                    <div class="metric-value d-inline-block">
-                                                                        <h1>4</h1>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                 </div>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                
-                                  <!-- Vehicle Status Table -->
-                                <div class="col-xl-6 col-lg-8 col-md-8 col-sm-14 col-14">
-                                    <div class="card">
-                                        <div class="card-body" style="height: 500px">
-                                            <hr width="145px" style="margin-top: -20px; border: 1px solid black; align: left">
-                                            <h5><i class="bi bi-calendar mr-2"></i> Vehicle Status
-                                            </h5>
-                                            <hr>
-                                            <p>
-                                                <div class="table-responsive">
-                                                    <table class="table">
-                                                        <thead class="bg-light">
-                                                            <tr class="border-0">
-                                                                <th class="border-0">#</th>
-                                                                <th class="border-0">Vehicle Type</th>
-                                                                <th class="border-0">Vehicle Name</th>
-                                                                <th class="border-0">Vehicle ID</th>
-                                                                <th class="border-0">Reservation Time</th>
-                                                                <th class="border-0">Reservor</th>
-                                                                <th class="border-0">Status</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>1</td>
-                                                                <td>Motorcycle</td>
-                                                                <td>LX08max</td>
-                                                                <td>id0001</td>
-                                                                <td>27-08-2024 01:22:12</td>
-                                                                <td>Ate Nineng</td>
-                                                                <td><span class="badge-dot badge-brand mr-1"></span>In Transit</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>Motorcycle</td>
-                                                                <td>PRQ01m80</td>
-                                                                <td>id0002</td>
-                                                                <td>25-08-2024 21:12:56</td>
-                                                                <td>Erica Raymundo</td>
-                                                                <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>3</td>
-                                                                <td>4-Wheeler Car</td>
-                                                                <td>Toyota Corolla</td>
-                                                                <td>id0003</td>
-                                                                <td>24-08-2024 14:12:00</td>
-                                                                <td>Tekulangot</td>
-                                                                <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>4</td>
-                                                                <td>Delivery Van</td>
-                                                                <td>Hiace</td>
-                                                                <td>id0004</td>
-                                                                <td>23-08-2024 09:12:35</td>
-                                                                <td>Dexter Von</td>
-                                                                <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
-                                                            </tr>
-                                                            
-                                                        </tbody>
-                                                    </table>
                                                 </div>
-                                            </p>
+                                            </div>
+                                            <div class="col-xl-5 col-lg-5 col-md-10 col-sm-16 col-16 mb-3">
+                                                <div class="card border-3 border-top border-top-primary">
+                                                    <div class="card-body">
+                                                        <h5 class="text-muted">Total Approved Requests</h5>
+                                                        <div class="metric-value d-inline-block">
+                                                            <h1>10</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-5 col-lg-5 col-md-10 col-sm-16 col-16 mb-3">
+                                                <div class="card border-3 border-top border-top-primary">
+                                                    <div class="card-body">
+                                                        <h5 class="text-muted">Total Pending Requests</h5>
+                                                        <div class="metric-value d-inline-block">
+                                                            <h1>3</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-5 col-lg-5 col-md-10 col-sm-16 col-16 mb-3">
+                                                <div class="card border-3 border-top border-top-primary">
+                                                    <div class="card-body">
+                                                        <h5 class="text-muted">Total Denied Requests</h5>
+                                                        <div class="metric-value d-inline-block">
+                                                            <h1>2</h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                    
+                            <!-- Vehicle Status Table Section -->
+                            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-14 col-14">
+                                <div class="card">
+                                    <div class="card-body" style="height: 500px;">
+                                        <hr width="145px" style="margin-top: -20px; border: 1px solid black; text-align: left;">
+                                        <h5><i class="bi bi-calendar mr-2"></i> Vehicle Status</h5>
+                                        <hr>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th class="border-0">#</th>
+                                                        <th class="border-0">Vehicle Type</th>
+                                                        <th class="border-0">Vehicle Name</th>
+                                                        <th class="border-0">Vehicle ID</th>
+                                                        <th class="border-0">Reservation Time</th>
+                                                        <th class="border-0">Reservor</th>
+                                                        <th class="border-0">Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Motorcycle</td>
+                                                        <td>LX08max</td>
+                                                        <td>id0001</td>
+                                                        <td>27-08-2024 01:22:12</td>
+                                                        <td>Ate Nineng</td>
+                                                        <td><span class="badge-dot badge-brand mr-1"></span>In Transit</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Motorcycle</td>
+                                                        <td>PRQ01m80</td>
+                                                        <td>id0002</td>
+                                                        <td>25-08-2024 21:12:56</td>
+                                                        <td>Erica Raymundo</td>
+                                                        <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>4-Wheeler Car</td>
+                                                        <td>Toyota Corolla</td>
+                                                        <td>id0003</td>
+                                                        <td>24-08-2024 14:12:00</td>
+                                                        <td>Tekulangot</td>
+                                                        <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Delivery Van</td>
+                                                        <td>Hiace</td>
+                                                        <td>id0004</td>
+                                                        <td>23-08-2024 09:12:35</td>
+                                                        <td>Dexter Von</td>
+                                                        <td><span class="badge-dot badge-success mr-1"></span>Returned</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
 
-                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                     <div class="card">
-                                         <h5 class="card-header">Pie Chart </h5>
-                                         <div class="card-body">
-                                             <div id="c3chart_pie"></div>
-                                         </div>
-                                     </div>
-                                 </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                    <div class="card">
+                                        <h5 class="card-header"> Overall Usage of Vehicles </h5>
+                                        <div class="card-body">
+                                            <div id="c3chart_pie1"></div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
                             </div>
@@ -448,7 +397,9 @@
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../home/documentation/js/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script>
+    <script src="../home/documentation/js/piechart.js"></script>
 </body>
  
 </html>

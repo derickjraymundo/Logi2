@@ -337,6 +337,36 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
 }
+.clickable-box {
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Makes the div clickable */
+}
 
+.borderless-box {
+    padding: 10px;
+    cursor: pointer;
+    color: inherit; /* Matches the text color of the container */
+}
+
+.borderless-box:hover {
+    background-color: #f0f0f0; /* Optional hover effect */
+}
+.clickable-card {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color */
+}
+
+.clickable-card:hover .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional hover effect */
+    transform: translateY(-2px); /* Slight lift on hover */
+    transition: all 0.2s ease; /* Smooth transition */
+}
+.full-screen {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Allows scrolling if content exceeds viewport height */
+    padding: 20px; /* Optional padding */
+    box-sizing: border-box;
+}
 
 
